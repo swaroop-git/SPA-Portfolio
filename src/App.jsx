@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { ThemeCtx } from './hooks/ThemeContext.js'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Skills from './components/Skills.jsx'
@@ -6,10 +7,6 @@ import Experience from './components/Experience.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
-
-export const ThemeCtx = createContext()
-
-export function useTheme() { return useContext(ThemeCtx) }
 
 export default function App() {
   const [theme, setTheme] = useState(() =>
